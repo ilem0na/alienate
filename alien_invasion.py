@@ -2,7 +2,7 @@ import sys
 import pygame
 from settings import Settings
 from ship import Ship
-from game_functions import check_events
+import game_functions as gf
 def run_game():
     # Initialize pygame, settings and create a screen object.
     pygame.init()
@@ -16,7 +16,7 @@ def run_game():
     while True:
         
         # watch for keyboard and mouse events.
-        check_events()
+        gf.check_events()
         
         # Make the most recently drawn screen visible.
         pygame.display.flip()
